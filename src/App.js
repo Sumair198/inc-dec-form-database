@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import react, { useEffect } from 'react'
+import reactDom from 'react-dom';
+// import {add,sub,mul,div} from './calc'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// function App()
+// {
+//   return <div>
+//   <ul>
+//   <li>Sum Is {add(2,2)}</li>
+//   <li>Sub Is {sub(4,2)}</li>
+//   <li>Mul Is {mul(3,3)}</li>
+//   <li>div Is {div(4,6)}</li>
+//   </ul>
+//   </div>
+// }
+
+
+function Add() {
+  const [count,setCount] = react.useState(0)
+  // useEffect(()=>
+  // {
+  //   alert('Incr/decr-App')
+  // })
+  function add() { 
+    setCount(count + 1)
+  }
+  function sub()
+  {
+    setCount(count - 1)
+  }
+  return <div className='counter'>
+    <h1>Temperature {count}<sup>o</sup>c</h1>
+    <button onClick={add}>Add</button>
+    <button onClick={sub}>Sub</button>
+    
+  </div>
 }
+export default Add;
 
-export default App;
+
+
