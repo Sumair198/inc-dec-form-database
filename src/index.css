@@ -12,13 +12,5 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.counter
-{
-  /* margin-left: 43%; */
-  text-align: center;
-}
-.counter > button
-{
-  margin: 10px;
-}
+
 
